@@ -1,0 +1,382 @@
+fileFormatVersion: 2
+guid: 5e150aec430b72441885e9a712a6943a
+timeCreated: 1471896762
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: laser_10_0
+    21300002: laser_10_1
+    21300004: laser_10_2
+    21300006: laser_10_3
+    21300008: laser_10_4
+    21300010: laser_10_5
+    21300012: laser_10_6
+    21300014: laser_10_7
+    21300016: laser_10_8
+    21300018: laser_10_9
+    21300020: laser_10_10
+    21300022: laser_10_11
+    21300024: laser_10_12
+    21300026: laser_10_13
+    21300028: laser_10_14
+    21300030: laser_10_15
+    21300032: laser_10_16
+    21300034: laser_10_17
+    21300036: laser_10_18
+    21300038: laser_10_19
+    21300040: laser_10_20
+    21300042: laser_10_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: laser_10_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 322
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62, y: -17}
+        - {x: -67, y: -27}
+        - {x: -10, y: -32}
+        - {x: 92, y: -32}
+        - {x: 105, y: -18}
+        - {x: 111, y: -18}
+        - {x: 107, y: -21}
+        - {x: 102, y: -25}
+        - {x: 137, y: -31}
+        - {x: 161, y: -19}
+        - {x: 161, y: 22}
+        - {x: 116, y: 29}
+        - {x: 106, y: 22}
+        - {x: 108, y: 18}
+        - {x: 112, y: 17}
+        - {x: 109, y: 16}
+        - {x: 89, y: 32}
+        - {x: -156, y: 32}
+        - {x: -161, y: 24}
+        - {x: -161, y: -30}
+        - {x: -154, y: -32}
+        - {x: -81, y: -32}
+        - {x: -67, y: -22}
+        - {x: -62, y: -17}
+        - {x: -62, y: -14}
+      - - {x: 32, y: -32}
+        - {x: 32, y: -30}
+        - {x: 29, y: -29}
+        - {x: 27, y: -32}
+    - name: laser_10_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 176
+        width: 69
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 173
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 168
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 164
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 130
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_6
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 130
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 130
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_8
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 138
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 16.5}
+        - {x: -16, y: 16.5}
+        - {x: -16, y: -15.5}
+        - {x: -14, y: -16.5}
+        - {x: 9, y: -16.5}
+        - {x: 16, y: -10.5}
+        - {x: 16, y: 11.5}
+        - {x: 15, y: 15.5}
+    - name: laser_10_9
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 138
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_10
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 138
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 100
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 95
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_13
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 91
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 70
+        width: 94
+        height: 65
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 32.5}
+        - {x: 0, y: 16.5}
+        - {x: 0, y: -23.5}
+        - {x: 11, y: -31.5}
+        - {x: 18, y: -32.5}
+        - {x: 54, y: -32.5}
+        - {x: 94, y: -8.5}
+        - {x: 94, y: 6.5}
+        - {x: 51, y: 32.5}
+    - name: laser_10_15
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 98
+        width: 19
+        height: 9
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 57
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_17
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 57
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_18
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 62
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: laser_10_19
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 3
+        width: 116
+        height: 65
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 32.5}
+        - {x: 0, y: 31.5}
+        - {x: 0, y: -22.5}
+        - {x: 5, y: -32.5}
+        - {x: 80, y: -32.5}
+        - {x: 116, y: -20.5}
+        - {x: 116, y: 21.5}
+        - {x: 69, y: 32.5}
+    - name: laser_10_20
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 62
+        height: 50
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 25}
+        - {x: 0, y: 24}
+        - {x: 0, y: -25}
+        - {x: 52, y: -25}
+        - {x: 62, y: -20}
+        - {x: 62, y: 23}
+        - {x: 58, y: 25}
+    - name: laser_10_21
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 23
+        width: 14
+        height: 25
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

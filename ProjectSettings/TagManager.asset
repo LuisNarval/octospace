@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Zona1
+  - Zona2
+  - Zona3
+  - Zona4
+  - Zona5
+  - Zona6
+  - Zona7
+  - Zona8
+  - Tanque
+  - Vidas
+  - bala
+  - item
+  - tiempo45
+  - tiempo120
+  - tentaculoJefeFinal
+  - ojoJefeFinal
+  - colmillo
+  - cuerpoJefeFinal
+  - tentaculo
+  - Zona9
+  - bomba
+  - laserJefe
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
