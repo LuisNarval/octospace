@@ -32,15 +32,15 @@ function Update () {
 	
 	if(!seguroLaser){
 		
-		if(Input.GetKey(KeyCode.Mouse0)||Input.GetKey(KeyCode.Space)){
+	    if(Input.GetKey(KeyCode.Mouse0)||Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Joystick1Button0)){
 			dispararLaser();
 		}
 
-		if(Input.GetKeyDown(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Space)){
+	    if(Input.GetKeyDown(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Joystick1Button0)){
 			this.gameObject.GetComponent.<AudioSource>().Play();
 		}
 
-		if(Input.GetKeyUp(KeyCode.Mouse0)||Input.GetKeyUp(KeyCode.Space)){
+	    if(Input.GetKeyUp(KeyCode.Mouse0)||Input.GetKeyUp(KeyCode.Space)||Input.GetKeyUp(KeyCode.Joystick1Button0)){
 			line.enabled = false;
 			this.gameObject.GetComponent.<AudioSource>().Stop();
 		}

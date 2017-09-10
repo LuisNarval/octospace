@@ -33,6 +33,7 @@ var cortinilla:GameObject;
 
 var codigoOpciones:naveMenuDemo;
 
+var joystickCentro:boolean=true;
 
 function Start () {
 	codigoOpciones=op_Iniciar.gameObject.GetComponent.<naveMenuDemo>();
@@ -88,6 +89,9 @@ function estado4(){
 
 function menu(){
 	
+    if(Input.GetAxis("Vertical")==0)
+        joystickCentro=true;
+
 	if(opcionTitulo.transform.localPosition.x<-350)
 		opcionTitulo.transform.localPosition.x+=500*Time.deltaTime;
 	
@@ -95,26 +99,39 @@ function menu(){
 			
 			
 			//movimiento del cursor
-			if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)){
-				estado++;
-				if(estado>=1)
-					estado=-3;
+			if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)||Input.GetAxis("Vertical")>0){
+			    if(joystickCentro){
+			        joystickCentro=false;
+			        
+			        estado++;
+			        if(estado>=1)
+			            estado=-3;
 				
-				acomodarPuntero();
-				this.GetComponent.<AudioSource>().Play();
+			        acomodarPuntero();
+			        this.GetComponent.<AudioSource>().Play();
+			    
+			    }
+			   
 			}
 			
-			if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)){
-				estado--;
-				if(estado<=-4)
-					estado=0;
+			if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)||Input.GetAxis("Vertical")<0){
 				
-				acomodarPuntero();
-				this.GetComponent.<AudioSource>().Play();
+			    if(joystickCentro){
+			        joystickCentro=false;
+			    
+			        estado--;
+			        if(estado<=-4)
+			            estado=0;
+				
+			        acomodarPuntero();
+			        this.GetComponent.<AudioSource>().Play();
+
+			    }
+			    
 			}
 	
 			//Acciones de cada opcion
-			if(estado==0&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0))){
+			if(estado==0&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Joystick1Button0))){
 				sound_IrAlJuego.Play();
 
 				estadoMenu=false;
@@ -127,7 +144,7 @@ function menu(){
 			}
 				
 			
-			if(estado==-1&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0))){
+			if(estado==-1&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Joystick1Button0))){
 				
 				sound_Entrada.Play();
 				ponerMenu();
@@ -135,7 +152,7 @@ function menu(){
 				estadoPuntuaciones=true;
 			}
 			
-			if(estado==-2&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0))){
+			if(estado==-2&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Joystick1Button0))){
 				
 				sound_Entrada.Play();
 				ponerMenu();
@@ -143,7 +160,7 @@ function menu(){
 				estadoCreditos=true;
 			}
 				
-			if(estado==-3&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0)))
+			if(estado==-3&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Joystick1Button0)))
 				Application.Quit();
 	}
 }

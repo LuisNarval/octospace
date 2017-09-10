@@ -8,6 +8,8 @@ var estado:int=0;
 
 var elegirOpcion=false;
 
+var joystickCentro:boolean=true;
+
 function Start () {
 	colorOriginal=reiniciar.gameObject.GetComponent.<UnityEngine.UI.Image>().color;
 	cambiarColor();
@@ -16,31 +18,40 @@ function Start () {
 function Update () {
 
 	if(elegirOpcion){
-			
-			if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)){
-				estado++;
+	
+	    if(Input.GetAxis("Vertical")==0)
+	        joystickCentro=true;
+
+	    if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)||Input.GetAxis("Vertical")>0){
 				
-				if(estado==1)
-					estado=-1;
-					
-				cambiarColor();
-				this.GetComponent.<AudioSource>().Play();
-			}
+	        if(joystickCentro){
+	            joystickCentro=false;
+	            estado++;
+	            if(estado==1)
+	                estado=-1;
+	            cambiarColor();
+	            this.GetComponent.<AudioSource>().Play();
+	        }
+	            
+		}
 			
 
-			if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)){
-				estado--;
+	    if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)||Input.GetAxis("Vertical")<0){
 				
-				if(estado==-2)
-					estado=0;
-					
-				cambiarColor();
-				GetComponent.<AudioSource>().Play();
-			}
+	        if(joystickCentro){
+	            joystickCentro=false;
+	            estado--;
+	            if(estado==-2)
+	                estado=0;
+	            cambiarColor();
+	            GetComponent.<AudioSource>().Play();
+	        }
+	        
+		}
 		
-			if(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown (KeyCode.Return)||Input.GetKeyDown (KeyCode.Mouse0))
+	    if(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown (KeyCode.Return)||Input.GetKeyDown (KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Joystick1Button0))
 				ejecutarOpcion();
-	}
+	    }
 
 
 }

@@ -26,7 +26,7 @@ function Update () {
 		
 		//Disparo para los distintos tipos de balas
 		if(estado!=4){
-			if(Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Mouse0)){
+		    if(Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Mouse0)||Input.GetKey(KeyCode.Joystick1Button0)){
 			
 				if(estado==1){							//Disparo normal
 					Disparo_balaNormal();				
@@ -39,9 +39,10 @@ function Update () {
 			
 			}
 		
-			if(Input.GetKeyUp(KeyCode.Space)||Input.GetKeyUp(KeyCode.Mouse0)){
+			if(Input.GetKeyUp(KeyCode.Space)||Input.GetKeyUp(KeyCode.Mouse0)||Input.GetKeyUp(KeyCode.Joystick1Button0)){
 				timer=0;
 			}
+
 		}
 		
 		
@@ -68,7 +69,7 @@ function Update () {
 		}
 
 		//Lanzamiento de la bomba
-		if(Input.GetKeyDown(KeyCode.LeftControl)||Input.GetKeyDown(KeyCode.RightControl)||Input.GetKeyDown(KeyCode.Mouse1)){
+		if(Input.GetKeyDown(KeyCode.LeftControl)||Input.GetKeyDown(KeyCode.RightControl)||Input.GetKeyDown(KeyCode.Mouse1)||Input.GetKeyDown(KeyCode.Joystick1Button1)){
 			
 			if(codigoInterfaz.bombas>0)
 				Disparo_Bomba();

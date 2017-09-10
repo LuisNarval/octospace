@@ -9,39 +9,47 @@ var colorOriginal:Color;
 
 var estado:int=0;
 
+var joystickCentro:boolean=true;
+
 function Start () {
 	colorOriginal=continuar.gameObject.GetComponent.<SpriteRenderer>().color;
 	cambiarColor();
 }
 
 function Update () {
-
-	if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)){
-		estado++;
+    if(Input.GetAxis("Vertical")==0)
+        joystickCentro=true;
+    
+    if(Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)||Input.GetAxis("Vertical")>0){
+	
+        if(joystickCentro){
+            joystickCentro=false;
+            estado++;
+            if(estado==1)
+                estado=-2;
+            cambiarColor();
+            continuar.GetComponent.<AudioSource>().Play();
+        
+        }
+    
+    }
 		
-		if(estado==1)
-			estado=-2;
-			
-		cambiarColor();
-
-		continuar.GetComponent.<AudioSource>().Play();
-	}
+    if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)||Input.GetAxis("Vertical")<0){
 		
-	if(Input.GetKeyDown(KeyCode.S)||Input.GetKeyDown(KeyCode.DownArrow)){
-		estado--;
-		
-		if(estado==-3)
-			estado=0;
-			
-		cambiarColor();
-
-		continuar.GetComponent.<AudioSource>().Play();
+        if(joystickCentro){
+            joystickCentro=false;
+            estado--;
+            if(estado==-3)
+                estado=0;
+            cambiarColor();
+            continuar.GetComponent.<AudioSource>().Play();
+        }
 	}
 	
-	if(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown (KeyCode.Return)||Input.GetKeyDown (KeyCode.Mouse0))
+    if(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown (KeyCode.Return)||Input.GetKeyDown (KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Joystick1Button0))
 		ejecutarOpcion();
 
-	if(Input.GetKeyDown(KeyCode.Escape)){
+	if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.Joystick1Button6)||Input.GetKeyDown(KeyCode.Joystick1Button7)){
 		GameObject.Find("Administrador").GetComponent.<pausa>().triggerPausa();
 		GameObject.Find("Administrador").GetComponent.<pausa>().enEjecucion=false;
 		

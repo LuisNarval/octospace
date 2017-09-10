@@ -15,7 +15,7 @@ var direccion:boolean=true;
 function Start () {}
 
 function Update () {
-    if (Input.GetKeyDown (KeyCode.Escape)&&!enEjecucion&&GameObject.Find("Administrador").GetComponent.<administrador>().estadoCortinilla==false&&GameObject.Find("Administrador").GetComponent.<administrador>().estadoInstrucciones==false) {
+    if ((Input.GetKeyDown (KeyCode.Escape)||Input.GetKeyDown(KeyCode.Joystick1Button6)||Input.GetKeyDown(KeyCode.Joystick1Button7))&&!enEjecucion&&GameObject.Find("Administrador").GetComponent.<administrador>().estadoCortinilla==false&&GameObject.Find("Administrador").GetComponent.<administrador>().estadoInstrucciones==false) {
        triggerPausa();
        ponerMenuPausa();
        enEjecucion=true;

@@ -433,7 +433,7 @@ function instrucciones(){
 		if(Time.time-tiempo>=3){
 			var valor=0;
 
-			if(Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Mouse0)){	
+			if(Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Mouse0)||Input.GetKeyDown(KeyCode.Joystick1Button0)){	
 				/*
 					GameObject.Find("Disparo").GetComponent.<UnityEngine.UI.Text>().color=Color.green;
 					GameObject.Find("espacio").GetComponent.<SpriteRenderer>().color=Color.green;
@@ -448,7 +448,7 @@ function instrucciones(){
 				GetComponent.<AudioSource>().Play();
 			}
 
-			if(Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl)||Input.GetKey(KeyCode.Mouse1)){
+			if(Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl)||Input.GetKey(KeyCode.Mouse1)||Input.GetKeyDown(KeyCode.Joystick1Button1)){
 				/*	
 					GameObject.Find("Bomba").GetComponent.<UnityEngine.UI.Text>().color=Color.green;
 					GameObject.Find("ctrl").GetComponent.<SpriteRenderer>().color=Color.green;
@@ -463,7 +463,7 @@ function instrucciones(){
 				GetComponent.<AudioSource>().Play();
 			}
 
-			if(Input.GetKey(KeyCode.Escape)){
+			if(Input.GetKey(KeyCode.Escape)||Input.GetKeyDown(KeyCode.Joystick1Button7)||Input.GetKeyDown(KeyCode.Joystick1Button6)){
 				/*	
 					GameObject.Find("tuto_pausa").GetComponent.<UnityEngine.UI.Text>().color=Color.green;
 					GameObject.Find("esc").GetComponent.<SpriteRenderer>().color=Color.green;
