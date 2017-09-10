@@ -48,6 +48,9 @@ private var separacion=7;
 public var irAMenu:boolean=false;
 public var irAReinicio:boolean=false;
 
+var letreroNivel:Animator;
+var textoNivel:Text;
+
 function Start () {
 	cortinilla.gameObject.SetActive (true);
 	ventana.gameObject.SetActive (true);
@@ -164,6 +167,10 @@ function zona1(){
 		banderaInstanciar=false;
 		codigoInterfaz.zona=1;
 		codigoInterfaz.reescribirZona();
+        
+        textoNivel.text="1";
+        letreroNivel.SetTrigger("nuevoNivel");
+
 	}	
 }
 
@@ -184,6 +191,9 @@ function zona2(){
 
 		codigoInterfaz.zona=2;
 		codigoInterfaz.reescribirZona();
+
+        textoNivel.text="2";
+        letreroNivel.SetTrigger("nuevoNivel");
 	}		
 }
 
@@ -202,6 +212,10 @@ function zona3(){
 
 		codigoInterfaz.zona=3;
 		codigoInterfaz.reescribirZona();
+
+        textoNivel.text="3";
+        letreroNivel.SetTrigger("nuevoNivel");
+
 	}	
 }
 
@@ -222,6 +236,9 @@ function zona4(){
 
 		codigoInterfaz.zona=4;
 		codigoInterfaz.reescribirZona();
+
+        textoNivel.text="4";
+        letreroNivel.SetTrigger("nuevoNivel");
 	}	
 }
 
@@ -244,6 +261,9 @@ function zona5(){
 
 		codigoInterfaz.zona=5;
 		codigoInterfaz.reescribirZona();
+
+        textoNivel.text="5";
+        letreroNivel.SetTrigger("nuevoNivel");
 	}
 }
 
@@ -266,6 +286,9 @@ function zona6(){
 
 		codigoInterfaz.zona=6;
 		codigoInterfaz.reescribirZona();
+
+        textoNivel.text="6";
+        letreroNivel.SetTrigger("nuevoNivel");
 	}
 }
 
@@ -286,6 +309,9 @@ function zona7(){
 
 		codigoInterfaz.zona=7;
 		codigoInterfaz.reescribirZona();
+
+        textoNivel.text="7";
+        letreroNivel.SetTrigger("nuevoNivel");
 	}
 }
 
@@ -318,6 +344,9 @@ function zona8(){
 
 		codigoInterfaz.zona=8;
 		codigoInterfaz.reescribirZona();
+
+        textoNivel.text="8";
+        letreroNivel.SetTrigger("nuevoNivel");
 	}
 }
 
