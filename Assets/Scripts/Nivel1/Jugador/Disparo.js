@@ -179,5 +179,5 @@ function Disparo_Escopeta(){
 function Disparo_Bomba(){
 	Instantiate(Bomba,this.transform.position,this.transform.rotation);
 	codigoInterfaz.bombas--;
-	codigoInterfaz.reescribirPuntaje();
+	codigoInterfaz.reescribirCantidadBombas();
 }

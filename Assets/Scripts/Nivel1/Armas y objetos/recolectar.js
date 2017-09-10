@@ -12,7 +12,7 @@ function OnCollisionEnter(invasor:Collision){
 		if(estado==0){
 			if(GameObject.Find("Canvas").GetComponent.<Controlador1>().bombas<5){
 				GameObject.Find("Canvas").GetComponent.<Controlador1>().bombas++;
-				GameObject.Find("Canvas").GetComponent.<Controlador1>().reescribirPuntaje();
+				GameObject.Find("Canvas").GetComponent.<Controlador1>().reescribirCantidadBombas();
 			}
 			GameObject.Find("Canvas").GetComponent.<Controlador1>().puntos+=25;
 			GameObject.Find("Canvas").GetComponent.<Controlador1>().reescribirPuntaje();

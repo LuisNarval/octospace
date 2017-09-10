@@ -66,7 +66,7 @@ function Update () {
 			
 			
 		if(estado=="Zona1"){
-			if(cP.puntos<50)
+			if(cP.enemigosDerrotados<60)
 				zona1();	
 			else{
 				estado="Zona2";
@@ -80,7 +80,7 @@ function Update () {
 		}	
 		
 		if(estado=="Zona2"){
-			if(cP.puntos<150)
+		    if(cP.enemigosDerrotados<120)
 				zona2();	
 			else{
 				estado="Zona3";
@@ -89,7 +89,7 @@ function Update () {
 		}	
 			
 		if(estado=="Zona3"){
-			if(cP.puntos<400)
+		    if(cP.enemigosDerrotados<180)
 				zona3();	
 			else{
 				estado="Zona4";
@@ -98,7 +98,7 @@ function Update () {
 		}		
 		
 		if(estado=="Zona4"){
-			if(cP.puntos<800)
+		    if(cP.enemigosDerrotados<240)
 				zona4();	
 			else{
 				estado="Zona5";
@@ -107,7 +107,7 @@ function Update () {
 		}
 			
 		if(estado=="Zona5"){
-			if(cP.puntos<1500)
+		    if(cP.enemigosDerrotados<300)
 				zona5();	
 			else{	
 				estado="Zona6";
@@ -115,7 +115,7 @@ function Update () {
 			}
 		}
 		if(estado=="Zona6"){
-			if(cP.puntos<3000)
+		    if(cP.enemigosDerrotados<360)
 				zona6();	
 			else{
 				estado="Zona7";
@@ -124,7 +124,7 @@ function Update () {
 		}	
 			
 		if(estado=="Zona7"){
-			if(cP.puntos<5000)
+		    if(cP.enemigosDerrotados<420)
 				zona7();	
 			else{
 				estado="Zona8";
@@ -133,7 +133,7 @@ function Update () {
 		}	
 			
 		if(estado=="Zona8"){
-			if(cP.puntos<8000)
+		    if(cP.enemigosDerrotados<480)
 				zona8();	
 			else{
 				estado="Zona9";
@@ -163,7 +163,7 @@ function zona1(){
 			d(Z);
 		banderaInstanciar=false;
 		codigoInterfaz.zona=1;
-		codigoInterfaz.reescribirPuntaje();
+		codigoInterfaz.reescribirZona();
 	}	
 }
 
@@ -183,7 +183,7 @@ function zona2(){
 		banderaInstanciar=false;
 
 		codigoInterfaz.zona=2;
-		codigoInterfaz.reescribirPuntaje();
+		codigoInterfaz.reescribirZona();
 	}		
 }
 
@@ -201,7 +201,7 @@ function zona3(){
 		banderaInstanciar=false;
 
 		codigoInterfaz.zona=3;
-		codigoInterfaz.reescribirPuntaje();	
+		codigoInterfaz.reescribirZona();
 	}	
 }
 
@@ -221,7 +221,7 @@ function zona4(){
 		banderaInstanciar=false;
 
 		codigoInterfaz.zona=4;
-		codigoInterfaz.reescribirPuntaje();	
+		codigoInterfaz.reescribirZona();
 	}	
 }
 
@@ -243,7 +243,7 @@ function zona5(){
 		banderaInstanciar=false;
 
 		codigoInterfaz.zona=5;
-		codigoInterfaz.reescribirPuntaje();
+		codigoInterfaz.reescribirZona();
 	}
 }
 
@@ -265,7 +265,7 @@ function zona6(){
 		banderaInstanciar=false;
 
 		codigoInterfaz.zona=6;
-		codigoInterfaz.reescribirPuntaje();
+		codigoInterfaz.reescribirZona();
 	}
 }
 
@@ -285,7 +285,7 @@ function zona7(){
 		banderaInstanciar=false;
 
 		codigoInterfaz.zona=7;
-		codigoInterfaz.reescribirPuntaje();
+		codigoInterfaz.reescribirZona();
 	}
 }
 
@@ -317,7 +317,7 @@ function zona8(){
 		banderaInstanciar=false;
 
 		codigoInterfaz.zona=8;
-		codigoInterfaz.reescribirPuntaje();
+		codigoInterfaz.reescribirZona();
 	}
 }
 
@@ -333,7 +333,7 @@ function zona9(){
 		JefeFinal.SetActive(true);
 
 		codigoInterfaz.zona=9;
-		codigoInterfaz.reescribirPuntaje();
+		codigoInterfaz.reescribirZona();
 	}
 }
 

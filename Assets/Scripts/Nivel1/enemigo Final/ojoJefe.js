@@ -1,7 +1,7 @@
 ﻿#pragma strict
 import UnityEngine.UI;
 
-var vida:int=1000;
+var vida:int=500;
 
 public var marcadorVidaJefe:Slider;
 public var cuerpoMarcador:GameObject;
