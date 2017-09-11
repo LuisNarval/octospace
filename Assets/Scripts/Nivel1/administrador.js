@@ -363,6 +363,7 @@ function zona9(){
 
 		codigoInterfaz.zona=9;
 		codigoInterfaz.reescribirZona();
+		letreroNivel.SetTrigger("alarma");
 	}
 }
 

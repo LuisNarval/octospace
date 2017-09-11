@@ -115,7 +115,7 @@ function cambiarArma(arma:int){
 
 function Disparo_balaNormal(){
 	if(timer==0){
-		Instantiate(Bullet,this.transform.position,this.transform.rotation);
+	    Instantiate(Bullet,new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z-0.2),this.transform.rotation);
 	}	
 	timer+=2*Time.deltaTime;
 	
@@ -125,7 +125,7 @@ function Disparo_balaNormal(){
 
 function Disparo_Misil(){
 	if(timer==0){
-		Instantiate(Bullet_Misil,this.transform.position,Quaternion.Euler(0,0,180));
+	    Instantiate(Bullet_Misil,new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z+0.1),Quaternion.Euler(0,0,180));
 		balas--;
 		codigoInterfaz.actualizarBalas(balas);
 	
@@ -157,7 +157,7 @@ function Disparo_Escopeta(){
 		var dummy:GameObject;
 		var valorAngulo:int=-7;
 		for(var i=0;i<3;i++){
-			dummy=Instantiate(Bullet_Shotgun,this.transform.position,this.transform.rotation);
+		    dummy=Instantiate(Bullet_Shotgun,new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z+0.1),this.transform.rotation);
 			dummy.gameObject.GetComponent.<Disparo_Shotgun>().angulo=valorAngulo;
 			dummy.gameObject.transform.rotation=Quaternion.Euler(0, 0, valorAngulo*5);
 			valorAngulo+=7;
@@ -178,7 +178,7 @@ function Disparo_Escopeta(){
 
 
 function Disparo_Bomba(){
-	Instantiate(Bomba,this.transform.position,this.transform.rotation);
+    Instantiate(Bomba,new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z+0.2),this.transform.rotation);
 	codigoInterfaz.bombas--;
 	codigoInterfaz.reescribirCantidadBombas();
 }
