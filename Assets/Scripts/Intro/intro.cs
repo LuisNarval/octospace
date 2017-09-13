@@ -15,7 +15,7 @@ public class intro : MonoBehaviour {
 	void Update () {
 	
 		if(siguiente){
-			SceneManager.LoadScene("menu");
+			SceneManager.LoadScene("seleccionControl");
 		}
 	}
 }

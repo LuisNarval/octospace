@@ -14,6 +14,10 @@ var ventana:GameObject;
 var instruccionesMov:GameObject;
 var instruccionesDisp:GameObject;
 
+var instruccionesMovControl:GameObject;
+var instruccionesDispControl:GameObject;
+
+
 var MeteoritoPequenio:GameObject;
 var MeteoritoMediano:GameObject;
 var Retrete:GameObject;
@@ -438,6 +442,17 @@ function k(zona:String){
 function instrucciones(){	
 	if(subEstadoInstrucciones1){
 		animCortinilla.SetBool("agrandarse",true);		
+		
+		if(PlayerPrefs.GetString("SELECCIONDECONTROL")==""||PlayerPrefs.GetString("SELECCIONDECONTROL")=="TECLADO"){
+		    instruccionesMov.SetActive(true);
+		} else if (PlayerPrefs.GetString("SELECCIONDECONTROL")=="CONTROL"){
+		    instruccionesMovControl.SetActive(true);
+		}
+		
+		
+		
+		
+		
 		if(Time.time-tiempo>=2){
 			if(Input.GetAxisRaw ("Horizontal")||Input.GetAxisRaw ("Vertical")){
 				ventana.gameObject.GetComponent.<SpriteRenderer>().color=Color.green;	
@@ -455,8 +470,16 @@ function instrucciones(){
 		}		
 		if(Time.time-tiempo>=3){
 			ventana.gameObject.GetComponent.<SpriteRenderer>().color=Color.white;	
-			instruccionesMov.SetActive(false);
-			instruccionesDisp.SetActive(true);
+			
+
+			if(PlayerPrefs.GetString("SELECCIONDECONTROL")==""||PlayerPrefs.GetString("SELECCIONDECONTROL")=="TECLADO"){
+			    instruccionesMov.SetActive(false);
+			    instruccionesDisp.SetActive(true);
+			} else if (PlayerPrefs.GetString("SELECCIONDECONTROL")=="CONTROL"){
+			    instruccionesMovControl.SetActive(false);
+			    instruccionesDispControl.SetActive(true);
+			}
+
 			animCortinilla.SetBool("encogerse",false);
 			animCortinilla.SetBool("agrandarse",true);			
 		}
@@ -515,8 +538,14 @@ function instrucciones(){
 		}
 		if(Time.time-tiempo>=3){
 			ventana.gameObject.GetComponent.<SpriteRenderer>().color=Color.white;	
-			instruccionesMov.SetActive(true);
+			
+			instruccionesMov.SetActive(false);
 			instruccionesDisp.SetActive(false);
+			
+			instruccionesMovControl.SetActive(false);
+		    instruccionesDispControl.SetActive(false);
+			
+
 			ventana.SetActive(false);
 			estadoInstrucciones=false;
 			estado="Zona1";

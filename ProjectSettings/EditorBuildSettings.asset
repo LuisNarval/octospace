@@ -7,13 +7,16 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Escenas/intro.unity
-    guid: 00000000000000000000000000000000
+    guid: aca75e37ec35d7e4c86b62535a11419e
+  - enabled: 1
+    path: Assets/Escenas/seleccionControl.unity
+    guid: 62824ca66e0142345b40e6741383e7cc
   - enabled: 1
     path: Assets/Escenas/Menu.unity
-    guid: 00000000000000000000000000000000
+    guid: bb567e3e860b2d0449e882a95cf24adf
   - enabled: 1
     path: Assets/Escenas/nivel1.unity
-    guid: 00000000000000000000000000000000
+    guid: 225c9eec5cdeaff48bad7c58ea3e2101
   - enabled: 1
     path: Assets/Escenas/final.unity
-    guid: 00000000000000000000000000000000
+    guid: eaa7605cbd4395042a9036bf8f1589c6
